@@ -1,0 +1,30 @@
+{
+  "name": "react-native-jalali-datepicker",
+  "version": "0.0.0",
+  "description": "React Native Jalali DatePicker component for both Android and iOS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohamadKh75/react-native-jalali-datepicker.git"
+  },
+  "keywords": [
+    "react native",
+    "calendar",
+    "date",
+    "datepicker",
+    "jalali",
+    "jalaali",
+    "shamsi",
+    "persian"
+  ],
+  "author": "MohamadKh75",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MohamadKh75/react-native-jalali-datepicker/issues"
+  },
+  "homepage": "https://github.com/MohamadKh75/react-native-jalali-datepicker#readme",
+  "readme": "https://github.com/MohamadKh75/react-native-jalali-datepicker#readme"
+}
