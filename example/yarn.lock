@@ -981,9 +981,9 @@
     chalk "^3.0.0"
 
 "@mohamadkh75/react-native-jalali-datepicker@latest":
-  version "0.0.1-0"
-  resolved "https://registry.yarnpkg.com/@mohamadkh75/react-native-jalali-datepicker/-/react-native-jalali-datepicker-0.0.1-0.tgz#0da83ba735f3a187486a7c308ee24cbeeedfba00"
-  integrity sha512-tTeQactor8fCUrDCbjVEGENybomLIYA7YUIpvyX5PDYc1v8AGWz/89DvzONagioa8Fn6Lu3Gc/zqJsbu0DyfXg==
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@mohamadkh75/react-native-jalali-datepicker/-/react-native-jalali-datepicker-1.0.0.tgz#841d346affc0d0a3affc13e57faf6cb366c0b41f"
+  integrity sha512-J6Ve/423kNREnMzYeF6hRx4Jr+PrPmqBoSj1LoMmvWQKWJddr9qTKuf/I9VcXdoWKJfBCQp9ckn8XH2uq7tF8w==
 
 "@react-native-community/cli-debugger-ui@^3.0.0":
   version "3.0.0"
