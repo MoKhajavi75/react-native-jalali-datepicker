@@ -10,6 +10,7 @@
 
 ## Preview
 
+<div align="center">
 <img
   alt='react-native-jalali-datepicker-example'
   src='assets/react-native-jalali-datepicker-1.jpg'
@@ -19,6 +20,7 @@
   alt='react-native-jalali-datepicker-example'
   src='assets/react-native-jalali-datepicker-2.jpg'
   width="350" />
+</div>
 
 ## Install
 
@@ -111,31 +113,31 @@ import DatePicker from '@mohamadkh75/react-native-jalali-datepicker';
 
 |          Prop          |                      Default                      |     Type     |
 | :--------------------: | :-----------------------------------------------: | :----------: |
-|         style          |     see [`Props.js`](src/components/props.js)     | `ViewStyle`  |
+|         style          |          see [`Props.js`](src/props.js)           | `ViewStyle`  |
 |        selected        |                       today                       |   `string`   |
 |     dateSeparator      |                        `/`                        |   `string`   |
 |        minDate         |                     last year                     |   `string`   |
 |        maxDate         |                     next year                     |   `string`   |
 |      onDateChange      |            date => console.warn(date)             |  `Function`  |
-|  headerContainerStyle  |     see [`Props.js`](src/components/props.js)     | `ViewStyle`  |
+|  headerContainerStyle  |          see [`Props.js`](src/props.js)           | `ViewStyle`  |
 |   yearMonthBoxStyle    |          see [`Props.js`](src/props.js)           | `ViewStyle`  |
 |   yearMonthTextStyle   |         { fontSize: 22, color: 'black' }          | `TextStyle`  |
-|   iconContainerStyle   |     see [`Props.js`](src/components/props.js)     | `ViewStyle`  |
-|     backIconStyle      |     see [`Props.js`](src/components/props.js)     | `ImageStyle` |
-|     nextIconStyle      |     see [`Props.js`](src/components/props.js)     | `ImageStyle` |
-|     eachMonthStyle     |     see [`Props.js`](src/components/props.js)     | `ViewStyle`  |
+|   iconContainerStyle   |          see [`Props.js`](src/props.js)           | `ViewStyle`  |
+|     backIconStyle      |          see [`Props.js`](src/props.js)           | `ImageStyle` |
+|     nextIconStyle      |          see [`Props.js`](src/props.js)           | `ImageStyle` |
+|     eachMonthStyle     |          see [`Props.js`](src/props.js)           | `ViewStyle`  |
 |   eachMonthTextStyle   |         { fontSize: 16, color: 'white' }          | `TextStyle`  |
-| weekdaysContainerStyle |     see [`Props.js`](src/components/props.js)     | `ViewStyle`  |
-|      weekdayStyle      |     see [`Props.js`](src/components/props.js)     | `ViewStyle`  |
+| weekdaysContainerStyle |          see [`Props.js`](src/props.js)           | `ViewStyle`  |
+|      weekdayStyle      |          see [`Props.js`](src/props.js)           | `ViewStyle`  |
 |    weekdayTextStyle    | { fontSize: 16, color: 'black', marginBottom: 5 } | `TextStyle`  |
-|      borderColor       |                      'coral'                      |   `string`   |
-|        dayStyle        |     see [`Props.js`](src/components/props.js)     | `ViewStyle`  |
-|    selectedDayStyle    |     see [`Props.js`](src/components/props.js)     | `ViewStyle`  |
-|    selectedDayColor    |                      'coral'                      |   `string`   |
+|      borderColor       |                      `coral`                      |   `string`   |
+|        dayStyle        |          see [`Props.js`](src/props.js)           | `ViewStyle`  |
+|    selectedDayStyle    |          see [`Props.js`](src/props.js)           | `ViewStyle`  |
+|    selectedDayColor    |                      `coral`                      |   `string`   |
 |      dayTextStyle      |                 { fontSize: 18 }                  | `TextStyle`  |
-|  selectedDayTextColor  |                     '#FFFFFF'                     |   `string`   |
-|      dayTextColor      |                     '#111111'                     |   `string`   |
-|   disabledTextColor    |                     '#999999'                     |   `string`   |
+|  selectedDayTextColor  |                     `#FFFFFF`                     |   `string`   |
+|      dayTextColor      |                     `#111111`                     |   `string`   |
+|   disabledTextColor    |                     `#999999`                     |   `string`   |
 
 ## Example
 

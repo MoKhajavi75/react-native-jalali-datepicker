@@ -2,7 +2,6 @@ import { PureComponent } from 'react';
 import { StyleProp, ViewStyle, TextStyle, ImageStyle } from 'react-native';
 
 export interface Props {
-  // Date Picker
   /**
    * @required
    * Calendar container style
@@ -35,7 +34,6 @@ export interface Props {
    */
   onDateChange: Function;
 
-  // Header
   /**
    * Header style which contains arrows and year-month
    */
@@ -76,7 +74,6 @@ export interface Props {
    */
   nextIconStyle?: StyleProp<ImageStyle>;
 
-  // Months
   /**
    * Each month box style in month selector
    */
@@ -87,7 +84,6 @@ export interface Props {
    */
   eachMonthTextStyle?: StyleProp<TextStyle>;
 
-  // Weekdays
   /**
    * Top row style which contains weekdays
    */
@@ -108,7 +104,6 @@ export interface Props {
    */
   borderColor?: string;
 
-  // Days
   /**
    * Each day style in calendar
    */
