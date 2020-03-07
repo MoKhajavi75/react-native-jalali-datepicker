@@ -42,7 +42,9 @@ class DatePicker extends PureComponent {
       backIcon,
       backIconStyle,
       nextIcon,
-      nextIconStyle
+      nextIconStyle,
+      borderColor,
+      yearMonthBoxStyle
     } = this.props;
 
     const changeYear = increase => () =>
@@ -77,6 +79,8 @@ class DatePicker extends PureComponent {
       <Header
         dateSeparator={dateSeparator}
         containerStyle={headerContainerStyle}
+        yearMonthBoxStyle={yearMonthBoxStyle}
+        borderColor={borderColor}
         isSelectingMonth={isSelectingMonth}
         onYearMonthPress={() =>
           this.setState(state => ({

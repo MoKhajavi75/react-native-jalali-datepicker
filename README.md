@@ -118,6 +118,7 @@ import DatePicker from '@mohamadkh75/react-native-jalali-datepicker';
 |        maxDate         |                     next year                     |   `string`   |
 |      onDateChange      |            date => console.warn(date)             |  `Function`  |
 |  headerContainerStyle  |     see [`Props.js`](src/components/props.js)     | `ViewStyle`  |
+|   yearMonthBoxStyle    |          see [`Props.js`](src/props.js)           | `ViewStyle`  |
 |   yearMonthTextStyle   |         { fontSize: 22, color: 'black' }          | `TextStyle`  |
 |   iconContainerStyle   |     see [`Props.js`](src/components/props.js)     | `ViewStyle`  |
 |     backIconStyle      |     see [`Props.js`](src/components/props.js)     | `ImageStyle` |

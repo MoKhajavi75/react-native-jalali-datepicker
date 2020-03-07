@@ -20,6 +20,14 @@ export const DEFAULT_PROPS = {
 
   // Header
   headerContainerStyle: { height: '15%' },
+  yearMonthBoxStyle: {
+    width: '30%',
+    height: '75%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderRadius: 10
+  },
   yearMonthTextStyle: { fontSize: 22, color: 'black' },
   iconContainerStyle: { width: `${100 / 7}%` },
   backIcon: require('./icons/01.png'),

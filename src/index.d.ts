@@ -42,6 +42,11 @@ export interface Props {
   headerContainerStyle?: StyleProp<ViewStyle>;
 
   /**
+   * Year-month box style
+   */
+  yearMonthBoxStyle?: StyleProp<ViewStyle>;
+
+  /**
    * Year - Month text style
    */
   yearMonthTextStyle?: StyleProp<TextStyle>;
@@ -99,7 +104,7 @@ export interface Props {
   weekdayTextStyle?: StyleProp<TextStyle>;
 
   /**
-   * Bottom border's color
+   * Borders color (Below weekdays and around year-month button)
    */
   borderColor?: string;
 

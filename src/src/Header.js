@@ -23,7 +23,9 @@ const Header = memo(
     minYear,
     maxYear,
     minMonth,
-    maxMonth
+    maxMonth,
+    borderColor,
+    yearMonthBoxStyle
   }) => {
     const renderIcon = (icon, isBack = false) => {
       const disabled = () => {
@@ -85,11 +87,7 @@ const Header = memo(
         {renderIcon(backIcon, true)}
 
         <TouchableOpacity
-          style={{
-            justifyContent: 'center',
-            alignItems: 'center',
-            alignSelf: 'stretch'
-          }}
+          style={[{ borderColor: borderColor }, yearMonthBoxStyle]}
           onPress={onYearMonthPress}
         >
           <Text style={yearMonthTextStyle}>
