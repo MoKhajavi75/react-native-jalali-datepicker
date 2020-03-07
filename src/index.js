@@ -204,4 +204,4 @@ class DatePicker extends PureComponent {
   }
 }
 
-export { DatePicker };
+export default DatePicker;
