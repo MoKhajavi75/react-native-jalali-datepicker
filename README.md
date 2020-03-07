@@ -50,6 +50,14 @@ import DatePicker from '@mohamadkh75/react-native-jalali-datepicker';
   minDate='1398/1/18'
   maxDate='1400/1/18'
   headerContainerStyle={{ height: '15%' }}
+  yearMonthBoxStyle={{
+    width: '30%',
+    height: '75%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderRadius: 10
+  }}
   yearMonthTextStyle={{ fontSize: 22, color: '#4bcffa' }}
   iconContainerStyle={{ width: `${100 / 7}%` }}
   backIconStyle={{

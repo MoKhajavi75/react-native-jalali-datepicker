@@ -48,6 +48,14 @@ const App = () => (
         minDate='1398/1/18'
         maxDate='1400/1/18'
         onDateChange={date => console.warn(date)}
+        yearMonthBoxStyle={{
+          width: '30%',
+          height: '75%',
+          justifyContent: 'center',
+          alignItems: 'center',
+          borderWidth: 1,
+          borderRadius: 10
+        }}
         headerContainerStyle={{ height: '15%' }}
         yearMonthTextStyle={{
           fontFamily: 'Vazir-Bold-FD',
