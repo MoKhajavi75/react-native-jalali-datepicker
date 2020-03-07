@@ -113,6 +113,7 @@ class DatePicker extends PureComponent {
     const onMonthChange = month =>
       this.setState({ month, isSelectingMonth: false });
 
+    // TODO: Create a year selector too!
     return (
       <MonthSelector
         onMonthChange={onMonthChange}
