@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { View, Platform, UIManager, LayoutAnimation } from 'react-native';
-import { Header, Weekdays, Calendar, MonthSelector } from './src';
+import { Header, Weekdays, Calendar, MonthSelector } from './components';
 import { DEFAULT_PROPS } from './props';
 
 class DatePicker extends PureComponent {
