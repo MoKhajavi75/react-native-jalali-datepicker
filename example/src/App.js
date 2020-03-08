@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StatusBar } from 'react-native';
-import { DatePicker } from '@mohamadkh75/react-native-jalali-datepicker';
+import DatePicker from '@mohamadkh75/react-native-jalali-datepicker';
 
 const App = () => (
   <>

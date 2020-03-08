@@ -10,7 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@mohamadkh75/react-native-jalali-datepicker": "latest",
+    "@mohamadkh75/react-native-jalali-datepicker": "^1.0.1",
     "react": "16.9.0",
     "react-native": "0.61.5"
   },
