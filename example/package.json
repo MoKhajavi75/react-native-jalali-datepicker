@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@mohamadkh75/react-native-jalali-datepicker": "latest",
-    "jalaali-js": "^1.1.0",
     "react": "16.9.0",
     "react-native": "0.61.5"
   },
