@@ -23,12 +23,7 @@ const Day = memo(
 
     return (
       <TouchableOpacity
-        style={[
-          {
-            transform: [{ rotateY: '180deg' }]
-          },
-          dayStyle
-        ]}
+        style={dayStyle}
         disabled={isSelected || disabled}
         onPress={onDateChange}
       >
@@ -43,6 +38,7 @@ const Day = memo(
           <Text
             style={[
               {
+                transform: [{ rotateY: '180deg' }],
                 color: disabled
                   ? disabledTextColor
                   : isSelected

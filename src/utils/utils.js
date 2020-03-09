@@ -64,8 +64,14 @@ export const getDays = (year, month) => {
   ];
 };
 
+export const getYears = (min, max) => {
+  const length = max - min + 1;
+
+  return Array.from({ length }, (_, i) => min + i);
+};
+
 export const fullDate = (year, month, day, dateSeparator) =>
-  `${year}${dateSeparator}${month}${dateSeparator}${
+  `${year}${dateSeparator}${month < 10 ? '0' + month : month}${dateSeparator}${
     day < 10 ? '0' + day : day
   }`;
 

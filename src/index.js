@@ -21,10 +21,10 @@ class DatePicker extends PureComponent {
         UIManager.setLayoutAnimationEnabledExperimental(true);
     }
 
-    this.minYear = props.minDate.split(props.dateSeparator)[0];
-    this.minMonth = props.minDate.split(props.dateSeparator)[1];
-    this.maxYear = props.maxDate.split(props.dateSeparator)[0];
-    this.maxMonth = props.maxDate.split(props.dateSeparator)[1];
+    this.minYear = parseInt(props.minDate.split(props.dateSeparator)[0]);
+    this.minMonth = parseInt(props.minDate.split(props.dateSeparator)[1]);
+    this.maxYear = parseInt(props.maxDate.split(props.dateSeparator)[0]);
+    this.maxMonth = parseInt(props.maxDate.split(props.dateSeparator)[1]);
   }
 
   componentDidUpdate() {

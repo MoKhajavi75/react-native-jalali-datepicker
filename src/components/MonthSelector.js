@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import { MONTHS } from '../utils';
-import { Month } from './index';
+import { Button } from './index';
 
 const MonthSelector = ({
   onMonthChange,
@@ -28,13 +28,13 @@ const MonthSelector = ({
   };
 
   const renderMonth = (item, index) => (
-    <Month
+    <Button
       key={item}
       title={item}
-      eachMonthStyle={eachMonthStyle}
-      eachMonthTextStyle={eachMonthTextStyle}
+      style={eachMonthStyle}
+      textStyle={eachMonthTextStyle}
       disabled={isDisabled(index + 1)}
-      selectMonth={selectMonth(index + 1)}
+      onPress={selectMonth(index + 1)}
     />
   );
 

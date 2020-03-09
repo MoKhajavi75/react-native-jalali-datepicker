@@ -4,4 +4,4 @@ export * from './Calendar';
 export * from './Day';
 
 export * from './MonthSelector';
-export * from './Month';
+export * from './Button';
