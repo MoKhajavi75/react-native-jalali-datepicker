@@ -16,6 +16,10 @@ const MonthSelector = ({
   const selectMonth = month => () => onMonthChange(month);
 
   const isDisabled = index => {
+    if (year == minYear && year == maxYear) {
+      return index < minMonth || index > maxMonth;
+    }
+
     if (year == minYear) {
       return index < minMonth;
     }
