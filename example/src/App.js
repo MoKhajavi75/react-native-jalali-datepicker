@@ -75,6 +75,23 @@ const App = () => (
           resizeMode: 'center',
           tintColor: '#4bcffa'
         }}
+        eachYearStyle={{
+          width: 110,
+          height: 82,
+          justifyContent: 'center',
+          alignItems: 'center',
+          backgroundColor: '#4bcffa',
+          marginTop: '1.5%',
+          marginBottom: 5,
+          marginHorizontal: '1.5%',
+          borderRadius: 10,
+          elevation: 3
+        }}
+        eachYearTextStyle={{
+          fontFamily: 'Vazir-FD',
+          fontSize: 16,
+          color: 'white'
+        }}
         eachMonthStyle={{
           width: `${88 / 3}%`,
           height: `${88 / 4}%`,
