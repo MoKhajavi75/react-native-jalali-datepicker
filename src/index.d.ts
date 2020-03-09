@@ -140,4 +140,4 @@ export interface Props {
   disabledTextColor?: string;
 }
 
-export class DatePicker extends PureComponent<Props> {}
+export default class DatePicker extends PureComponent<Props> {}
