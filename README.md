@@ -72,6 +72,22 @@ import DatePicker from '@mohamadkh75/react-native-jalali-datepicker';
     resizeMode: 'center',
     tintColor: '#4bcffa'
   }}
+  eachYearStyle={{
+    width: 110,
+    height: 82,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#4bcffa',
+    marginTop: '1.5%',
+    marginBottom: 5,
+    marginHorizontal: '1.5%',
+    borderRadius: 10,
+    elevation: 3
+  }}
+  eachYearTextStyle={{
+    fontSize: 16,
+    color: 'white'
+  }}
   eachMonthStyle={{
     width: `${88 / 3}%`,
     height: `${88 / 4}%`,
@@ -133,6 +149,8 @@ import DatePicker from '@mohamadkh75/react-native-jalali-datepicker';
 |   iconContainerStyle   |          see [`Props.js`](src/props.js)           | `ViewStyle`  |
 |     backIconStyle      |          see [`Props.js`](src/props.js)           | `ImageStyle` |
 |     nextIconStyle      |          see [`Props.js`](src/props.js)           | `ImageStyle` |
+|     eachYearStyle      |          see [`Props.js`](src/props.js)           | `ViewStyle`  |
+|   eachYearTextStyle    |         { fontSize: 16, color: 'white' }          | `TextStyle`  |
 |     eachMonthStyle     |          see [`Props.js`](src/props.js)           | `ViewStyle`  |
 |   eachMonthTextStyle   |         { fontSize: 16, color: 'white' }          | `TextStyle`  |
 | weekdaysContainerStyle |          see [`Props.js`](src/props.js)           | `ViewStyle`  |
