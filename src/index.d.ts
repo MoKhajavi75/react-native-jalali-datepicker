@@ -75,6 +75,16 @@ export interface Props {
   nextIconStyle?: StyleProp<ImageStyle>;
 
   /**
+   * Each year box style in year selector
+   */
+  eachYearStyle?: StyleProp<ViewStyle>;
+
+  /**
+   * Each year text style in year selector
+   */
+  eachYearTextStyle?: StyleProp<TextStyle>;
+
+  /**
    * Each month box style in month selector
    */
   eachMonthStyle?: StyleProp<ViewStyle>;

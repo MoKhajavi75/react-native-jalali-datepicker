@@ -4,10 +4,10 @@ import { toPersian } from '../utils';
 
 const Header = memo(
   ({
-    isSelectingMonth,
+    mode,
     dateSeparator,
     containerStyle,
-    onYearMonthPress,
+    changeModeTo,
     yearMonthTextStyle,
     iconContainerStyle,
     backIcon,
@@ -28,8 +28,12 @@ const Header = memo(
     yearMonthBoxStyle
   }) => {
     const renderIcon = (icon, isBack = false) => {
+      if (mode === 'year') {
+        return null;
+      }
+
       const disabled = () => {
-        if (isSelectingMonth) {
+        if (mode === 'month') {
           return isBack ? year <= minYear : year >= maxYear;
         }
         return isBack
@@ -38,13 +42,14 @@ const Header = memo(
       };
 
       const onBackIconPress = () => {
-        if (isSelectingMonth) {
+        if (mode === 'month') {
           return decreaseYear();
         }
         decreaseMonth();
       };
+
       const onNextIconPress = () => {
-        if (isSelectingMonth) {
+        if (mode === 'month') {
           return increaseYear();
         }
         increaseMonth();
@@ -72,6 +77,26 @@ const Header = memo(
       );
     };
 
+    const renderTitle = () => {
+      if (mode === 'calendar') {
+        return (
+          <Text style={yearMonthTextStyle}>
+            {toPersian(year) + dateSeparator + toPersian(month)}
+          </Text>
+        );
+      }
+
+      return <Text style={yearMonthTextStyle}>{toPersian(year)}</Text>;
+    };
+
+    const onYearMonthPress = () => {
+      if (mode === 'calendar') {
+        return changeModeTo('month');
+      }
+
+      return changeModeTo(mode === 'year' ? 'month' : 'year');
+    };
+
     return (
       <View
         style={[
@@ -90,11 +115,7 @@ const Header = memo(
           style={[{ borderColor: borderColor }, yearMonthBoxStyle]}
           onPress={onYearMonthPress}
         >
-          <Text style={yearMonthTextStyle}>
-            {isSelectingMonth
-              ? `${toPersian(year)}`
-              : `${toPersian(year)}${dateSeparator}${toPersian(month)}`}
-          </Text>
+          {renderTitle()}
         </TouchableOpacity>
 
         {renderIcon(nextIcon)}

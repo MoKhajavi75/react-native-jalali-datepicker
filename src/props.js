@@ -45,6 +45,21 @@ export const DEFAULT_PROPS = {
     tintColor: 'coral'
   },
 
+  // Years
+  eachYearStyle: {
+    width: 110,
+    height: 82,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#4bcffa',
+    marginTop: '1.5%',
+    marginBottom: 5,
+    marginHorizontal: '1.5%',
+    borderRadius: 10,
+    elevation: 3
+  },
+  eachYearTextStyle: { fontSize: 16, color: 'white' },
+
   // Months
   eachMonthStyle: {
     width: `${88 / 3}%`,

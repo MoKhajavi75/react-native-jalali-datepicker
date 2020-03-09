@@ -1,6 +1,12 @@
 import React, { PureComponent } from 'react';
 import { View, Platform, UIManager, LayoutAnimation } from 'react-native';
-import { Header, Weekdays, Calendar, MonthSelector } from './components';
+import {
+  Header,
+  Weekdays,
+  Calendar,
+  MonthSelector,
+  YearSelector
+} from './components';
 import { DEFAULT_PROPS } from './props';
 
 class DatePicker extends PureComponent {
@@ -13,7 +19,7 @@ class DatePicker extends PureComponent {
       year: parseInt(props.selected.split(props.dateSeparator)[0]),
       month: parseInt(props.selected.split(props.dateSeparator)[1]),
       date: props.selected,
-      isSelectingMonth: false
+      mode: 'calendar'
     };
 
     if (Platform.OS === 'android') {
@@ -32,8 +38,28 @@ class DatePicker extends PureComponent {
     LayoutAnimation.easeInEaseOut();
   }
 
+  renderContent() {
+    const { mode } = this.state;
+
+    switch (mode) {
+      case 'calendar':
+        return (
+          <>
+            {this.renderWeekdays()}
+            {this.renderCalendar()}
+          </>
+        );
+
+      case 'month':
+        return this.renderMonths();
+
+      case 'year':
+        return this.renderYears();
+    }
+  }
+
   renderHeader() {
-    const { year, month, isSelectingMonth } = this.state;
+    const { year, month, mode } = this.state;
     const {
       dateSeparator,
       headerContainerStyle,
@@ -47,18 +73,13 @@ class DatePicker extends PureComponent {
       yearMonthBoxStyle
     } = this.props;
 
+    const changeModeTo = mode => this.setState({ mode });
+
     const changeYear = increase => () =>
-      this.setState(state => {
-        if (increase) {
-          return { year: +state.year + 1, month: 1 };
-        }
-
-        if (state.year - 1 != this.minYear) {
-          return { year: state.year - 1, month: 1 };
-        }
-
-        return { year: state.year - 1, month: +this.minMonth };
-      });
+      this.setState(state => ({
+        year: increase ? state.year + 1 : state.year - 1,
+        month: 1
+      }));
 
     const changeMonth = increase => () =>
       this.setState(state => {
@@ -66,13 +87,13 @@ class DatePicker extends PureComponent {
           if (month == 12) {
             return { year: state.year + 1, month: 1 };
           }
-          return { month: +state.month + 1 };
-        } else {
-          if (month == 1) {
-            return { year: state.year - 1, month: 12 };
-          }
-          return { month: state.month - 1 };
+          return { month: state.month + 1 };
         }
+
+        if (month == 1) {
+          return { year: state.year - 1, month: 12 };
+        }
+        return { month: state.month - 1 };
       });
 
     return (
@@ -81,12 +102,8 @@ class DatePicker extends PureComponent {
         containerStyle={headerContainerStyle}
         yearMonthBoxStyle={yearMonthBoxStyle}
         borderColor={borderColor}
-        isSelectingMonth={isSelectingMonth}
-        onYearMonthPress={() =>
-          this.setState(state => ({
-            isSelectingMonth: !state.isSelectingMonth
-          }))
-        }
+        mode={mode}
+        changeModeTo={changeModeTo}
         yearMonthTextStyle={yearMonthTextStyle}
         iconContainerStyle={iconContainerStyle}
         backIcon={backIcon}
@@ -110,10 +127,8 @@ class DatePicker extends PureComponent {
   renderMonths() {
     const { year } = this.state;
     const { eachMonthStyle, eachMonthTextStyle } = this.props;
-    const onMonthChange = month =>
-      this.setState({ month, isSelectingMonth: false });
+    const onMonthChange = month => this.setState({ month, mode: 'calendar' });
 
-    // TODO: Create a year selector too!
     return (
       <MonthSelector
         onMonthChange={onMonthChange}
@@ -124,6 +139,21 @@ class DatePicker extends PureComponent {
         minMonth={this.minMonth}
         maxYear={this.maxYear}
         maxMonth={this.maxMonth}
+      />
+    );
+  }
+
+  renderYears() {
+    const { eachYearStyle, eachYearTextStyle } = this.props;
+    const onYearChange = year => this.setState({ year, mode: 'month' });
+
+    return (
+      <YearSelector
+        onYearChange={onYearChange}
+        eachYearStyle={eachYearStyle}
+        eachYearTextStyle={eachYearTextStyle}
+        minYear={this.minYear}
+        maxYear={this.maxYear}
       />
     );
   }
@@ -184,21 +214,13 @@ class DatePicker extends PureComponent {
   }
 
   render() {
-    const { isSelectingMonth } = this.state;
     const { style } = this.props;
 
     return (
       <View style={style}>
         {this.renderHeader()}
 
-        {isSelectingMonth ? (
-          this.renderMonths()
-        ) : (
-          <>
-            {this.renderWeekdays()}
-            {this.renderCalendar()}
-          </>
-        )}
+        {this.renderContent()}
       </View>
     );
   }
