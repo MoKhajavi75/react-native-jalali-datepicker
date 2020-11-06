@@ -1,7 +1,7 @@
 {
   "name": "@mohamadkh75/react-native-jalali-datepicker",
   "description": "React Native Jalali DatePicker component for both Android and iOS",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "MohamadKh75",
   "license": "MIT",
   "main": "src/index.js",
