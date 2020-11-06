@@ -1,5 +1,5 @@
 import { jalaaliMonthLength, toGregorian, toJalaali } from 'jalaali-js';
-import { PERSIAN_DIGITS } from './index';
+import { PERSIAN_DIGITS } from './constants';
 
 const j2g = (date, dateSeparator) => {
   const splitted = date.split(dateSeparator);
