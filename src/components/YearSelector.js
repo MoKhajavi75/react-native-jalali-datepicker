@@ -1,7 +1,7 @@
 import React from 'react';
 import { FlatList } from 'react-native';
 import { getYears } from '../utils';
-import { Button } from './index';
+import { Button } from './Button';
 
 const YearSelector = ({
   onYearChange,

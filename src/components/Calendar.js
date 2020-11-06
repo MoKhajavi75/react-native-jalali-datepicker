@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { FlatList } from 'react-native';
-import { Day } from './index';
+import { Day } from './Day';
 import { fullDate, getDays, isBefore, isAfter } from '../utils';
 
 const Calendar = memo(

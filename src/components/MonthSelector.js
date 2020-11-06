@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import { MONTHS } from '../utils';
-import { Button } from './index';
+import { Button } from './Button';
 
 const MonthSelector = ({
   onMonthChange,
