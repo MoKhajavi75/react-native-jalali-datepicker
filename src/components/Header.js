@@ -78,26 +78,26 @@ const Header = memo(
       );
     };
 
-    const changeToMonthName = {
-      1: 'فروردین',
-      2: 'اردیبهشت',
-      3: 'خرداد',
-      4: 'تیر',
-      5: 'مرداد',
-      6: 'شهریور',
-      7: 'مهر',
-      8: 'آبان',
-      9: 'آذر',
-      10: 'دی',
-      11: 'بهمن',
-      12: 'اسفند'
-    }
+    const changeToMonthName = [
+      'فروردین',
+      'اردیبهشت',
+      'خرداد',
+      'تیر',
+      'مرداد',
+      'شهریور',
+      'مهر',
+      'آبان',
+      'آذر',
+      'دی',
+      'بهمن',
+      'اسفند'
+    ];
     
     const renderTitle = () => {
       if (mode === 'calendar') {
         return (
           <Text style={yearMonthTextStyle}>
-            {toPersian(year) + dateSeparator + (showMonthLabel ? changeToMonthName[`${month}`] : toPersian(month))}
+            {`${showMonthLabel ? changeToMonthName[month] : toPersian(month)} ${dateSeparator} ${toPersian(year)}` }
           </Text>
         );
       }
