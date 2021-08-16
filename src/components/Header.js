@@ -97,7 +97,7 @@ const Header = memo(
       if (mode === 'calendar') {
         return (
           <Text style={yearMonthTextStyle}>
-            {toPersian(year) + dateSeparator + toPersian(showMonthLabel ? changeToMonthName[month] : month)}
+            {toPersian(year) + dateSeparator + (showMonthLabel ? changeToMonthName[month] : toPersian(month))}
           </Text>
         );
       }
