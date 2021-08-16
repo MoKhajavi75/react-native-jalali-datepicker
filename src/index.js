@@ -111,7 +111,7 @@ class DatePicker extends PureComponent {
         backIcon={backIcon}
         backIconStyle={backIconStyle}
         year={year}
-        month={month}
+        month={month - 1}
         nextIcon={nextIcon}
         nextIconStyle={nextIconStyle}
         increaseYear={changeYear(true)}
