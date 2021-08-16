@@ -21,7 +21,7 @@ const Calendar = memo(
     disabledTextColor
   }) => {
     const isSelected = day =>
-      selected == fullDate(year, month + 1, day, dateSeparator);
+      selected == fullDate(year, month, day, dateSeparator);
 
     const isDisabled = day => {
       const today = fullDate(year, month, day, dateSeparator);
@@ -32,7 +32,7 @@ const Calendar = memo(
     };
 
     const onChange = day => () =>
-      onDateChange(fullDate(year, month + 1, day, dateSeparator));
+      onDateChange(fullDate(year, month, day, dateSeparator));
 
     const renderDay = ({ item }) => (
       <Day
