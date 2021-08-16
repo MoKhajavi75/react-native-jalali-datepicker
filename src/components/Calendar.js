@@ -32,7 +32,7 @@ const Calendar = memo(
     };
 
     const onChange = day => () =>
-      onDateChange(fullDate(year, month, day, dateSeparator));
+      onDateChange(fullDate(year, month + 1, day, dateSeparator));
 
     const renderDay = ({ item }) => (
       <Day
