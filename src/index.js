@@ -61,6 +61,7 @@ class DatePicker extends PureComponent {
   renderHeader() {
     const { year, month, mode } = this.state;
     const {
+      showMonthLabel,
       dateSeparator,
       headerContainerStyle,
       yearMonthTextStyle,
@@ -98,6 +99,7 @@ class DatePicker extends PureComponent {
 
     return (
       <Header
+        showMonthLabel={showMonthLabel}
         dateSeparator={dateSeparator}
         containerStyle={headerContainerStyle}
         yearMonthBoxStyle={yearMonthBoxStyle}
