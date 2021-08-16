@@ -35,6 +35,7 @@
 import DatePicker from '@mohamadkh75/react-native-jalali-datepicker';
 
 <DatePicker
+  showMonthLabel={true}
   style={{
     width: '95%',
     height: '80%',
