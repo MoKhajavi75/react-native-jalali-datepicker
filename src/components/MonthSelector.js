@@ -37,8 +37,8 @@ const MonthSelector = ({
       title={item}
       style={eachMonthStyle}
       textStyle={eachMonthTextStyle}
-      disabled={isDisabled(index + 1)}
-      onPress={selectMonth(index + 1)}
+      disabled={isDisabled(index)}
+      onPress={selectMonth(index)}
     />
   );
 
