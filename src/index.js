@@ -119,9 +119,9 @@ class DatePicker extends PureComponent {
         increaseMonth={changeMonth(true)}
         decreaseMonth={changeMonth(false)}
         minYear={this.minYear}
-        minMonth={this.minMonth}
+        minMonth={this.minMonth - 1}
         maxYear={this.maxYear}
-        maxMonth={this.maxMonth}
+        maxMonth={this.maxMonth - 1}
       />
     );
   }
