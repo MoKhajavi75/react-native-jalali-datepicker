@@ -61,6 +61,7 @@ class DatePicker extends PureComponent {
   renderHeader() {
     const { year, month, mode } = this.state;
     const {
+      showMonthLabel,
       dateSeparator,
       headerContainerStyle,
       yearMonthTextStyle,
@@ -98,6 +99,7 @@ class DatePicker extends PureComponent {
 
     return (
       <Header
+        showMonthLabel={showMonthLabel}
         dateSeparator={dateSeparator}
         containerStyle={headerContainerStyle}
         yearMonthBoxStyle={yearMonthBoxStyle}
@@ -109,7 +111,7 @@ class DatePicker extends PureComponent {
         backIcon={backIcon}
         backIconStyle={backIconStyle}
         year={year}
-        month={month}
+        month={month - 1}
         nextIcon={nextIcon}
         nextIconStyle={nextIconStyle}
         increaseYear={changeYear(true)}
@@ -117,9 +119,9 @@ class DatePicker extends PureComponent {
         increaseMonth={changeMonth(true)}
         decreaseMonth={changeMonth(false)}
         minYear={this.minYear}
-        minMonth={this.minMonth}
+        minMonth={this.minMonth - 1}
         maxYear={this.maxYear}
-        maxMonth={this.maxMonth}
+        maxMonth={this.maxMonth - 1}
       />
     );
   }

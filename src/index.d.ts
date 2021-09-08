@@ -14,6 +14,10 @@ export interface Props {
   selected?: string;
 
   /**
+   * Show month label
+   */
+  showMonthLabel?: boolean;
+  /**
    * Date separator character, can be anything like `/`, `-`, etc
    */
   dateSeparator?: string;

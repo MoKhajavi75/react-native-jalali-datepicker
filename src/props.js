@@ -2,6 +2,7 @@ import { today, lastYear, nextYear } from './utils';
 
 export const DEFAULT_PROPS = {
   // Date Picker
+  showMonthLabel: true,
   style: {
     width: '95%',
     height: '80%',

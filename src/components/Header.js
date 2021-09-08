@@ -25,7 +25,8 @@ const Header = memo(
     minMonth,
     maxMonth,
     borderColor,
-    yearMonthBoxStyle
+    yearMonthBoxStyle,
+    showMonthLabel
   }) => {
     const renderIcon = (icon, isBack = false) => {
       if (mode === 'year') {
@@ -77,11 +78,26 @@ const Header = memo(
       );
     };
 
+    const changeToMonthName = [
+      'فروردین',
+      'اردیبهشت',
+      'خرداد',
+      'تیر',
+      'مرداد',
+      'شهریور',
+      'مهر',
+      'آبان',
+      'آذر',
+      'دی',
+      'بهمن',
+      'اسفند'
+    ];
+    
     const renderTitle = () => {
       if (mode === 'calendar') {
         return (
           <Text style={yearMonthTextStyle}>
-            {toPersian(year) + dateSeparator + toPersian(month)}
+            {`${showMonthLabel ? changeToMonthName[month] : toPersian(month)} ${dateSeparator} ${toPersian(year)}` }
           </Text>
         );
       }
