@@ -34,6 +34,7 @@ const Calendar = memo(
     const onChange = day => () =>
       onDateChange(fullDate(year, month, day, dateSeparator));
 
+    
     const renderDay = ({ item }) => (
       <Day
         item={item}
