@@ -34,8 +34,10 @@ class DatePicker extends PureComponent {
   }
 
   componentDidUpdate() {
-    // TODO: use animated
-    LayoutAnimation.easeInEaseOut();
+    if (Platform.OS === 'android') {
+      // TODO: use animated
+      LayoutAnimation.easeInEaseOut();
+    }
   }
 
   renderContent() {
