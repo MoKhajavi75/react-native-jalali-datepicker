@@ -18,7 +18,8 @@ const Calendar = memo(
     dayTextStyle,
     selectedDayTextColor,
     dayTextColor,
-    disabledTextColor
+    disabledTextColor,
+    onDateSelect
   }) => {
     const isSelected = day =>
       selected == fullDate(year, month, day, dateSeparator);
@@ -33,12 +34,14 @@ const Calendar = memo(
 
     const onChange = day => () =>
       onDateChange(fullDate(year, month, day, dateSeparator));
-
+    const onSelect = day => () =>
+      onDateSelect(fullDate(year, month, day, dateSeparator));
     const renderDay = ({ item }) => (
       <Day
         item={item}
         isSelected={isSelected(item)}
         onDateChange={onChange(item)}
+        onDateSelect={onSelect(item)}
         disabled={isDisabled(item)}
         dayStyle={dayStyle}
         selectedDayStyle={selectedDayStyle}
