@@ -185,6 +185,7 @@ class DatePicker extends PureComponent {
       minDate,
       maxDate,
       onDateChange,
+      onDateSelect,
       dayStyle,
       selectedDayStyle,
       selectedDayColor,
@@ -211,6 +212,7 @@ class DatePicker extends PureComponent {
         selectedDayTextColor={selectedDayTextColor}
         dayTextColor={dayTextColor}
         disabledTextColor={disabledTextColor}
+        onDateSelect={onDateSelect}
       />
     );
   }

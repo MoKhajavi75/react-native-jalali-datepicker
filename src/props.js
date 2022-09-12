@@ -17,6 +17,7 @@ export const DEFAULT_PROPS = {
   minDate: lastYear(),
   maxDate: nextYear(),
   onDateChange: date => console.warn(date),
+  onDateSelect: date => {},
 
   // Header
   headerContainerStyle: { height: '15%' },

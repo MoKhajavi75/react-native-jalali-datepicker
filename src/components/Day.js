@@ -6,6 +6,7 @@ const Day = memo(
   ({
     item,
     onDateChange,
+    onDateSelect,
     isSelected,
     disabled,
     dayStyle,
@@ -20,13 +21,16 @@ const Day = memo(
     if (blank) {
       return <View style={dayStyle} />;
     }
-
+    const setDate = () => {
+      if (isSelected) {
+        onDateSelect();
+      } else {
+        onDateChange();
+        onDateSelect();
+      }
+    };
     return (
-      <TouchableOpacity
-        style={dayStyle}
-        disabled={isSelected || disabled}
-        onPress={onDateChange}
-      >
+      <TouchableOpacity style={dayStyle} onPress={setDate}>
         <View
           style={[
             {
