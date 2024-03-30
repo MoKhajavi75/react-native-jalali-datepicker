@@ -201,7 +201,7 @@ class DatePicker extends PureComponent {
         year={year}
         month={month}
         selected={date}
-        onDateChange={date => this.setState({ date }, onChange(date))}
+        onDateChange={date => this.setState({ date },!this.props.renderButtons && ()=> onChange(date))}
         dateSeparator={dateSeparator}
         minDate={minDate}
         maxDate={maxDate}
@@ -225,6 +225,7 @@ class DatePicker extends PureComponent {
         {this.renderHeader()}
 
         {this.renderContent()}
+        {this.props.renderButtons(this.state.date)}
       </View>
     );
   }
