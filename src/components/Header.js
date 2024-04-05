@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { View, TouchableOpacity, Text, Image } from 'react-native';
+import { View, TouchableOpacity, Text, Image, I18nManager } from 'react-native';
 import { toPersian } from '../utils';
 
 const Header = memo(
@@ -101,7 +101,7 @@ const Header = memo(
       <View
         style={[
           {
-            flexDirection: 'row-reverse',
+            flexDirection: I18nManager.isRTL ? 'row' : 'row-reverse',
             justifyContent: 'center',
             alignItems: 'center',
             alignSelf: 'stretch'

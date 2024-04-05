@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, I18nManager } from 'react-native';
 import { WEEKDAYS_INITIALS } from '../utils';
 
 const Weekdays = memo(
@@ -17,7 +17,12 @@ const Weekdays = memo(
     );
 
     return (
-      <View style={[{ flexDirection: 'row-reverse' }, weekdaysContainerStyle]}>
+      <View
+        style={[
+          { flexDirection: I18nManager.isRTL ? 'row' : 'row-reverse' },
+          weekdaysContainerStyle
+        ]}
+      >
         {WEEKDAYS_INITIALS.map(renderWeekdays)}
       </View>
     );

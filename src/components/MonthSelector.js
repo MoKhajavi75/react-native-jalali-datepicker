@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { I18nManager, View } from 'react-native';
 import { MONTHS } from '../utils';
 import { Button } from './Button';
 
@@ -47,7 +47,7 @@ const MonthSelector = ({
       style={{
         width: '95%',
         height: '82.5%',
-        flexDirection: 'row-reverse',
+        flexDirection: I18nManager.isRTL ? 'row' : 'row-reverse',
         justifyContent: 'space-evenly',
         alignItems: 'center',
         alignSelf: 'center',

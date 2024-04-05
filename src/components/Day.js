@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, I18nManager } from 'react-native';
 import { toPersian } from '../utils';
 
 const Day = memo(
@@ -42,7 +42,9 @@ const Day = memo(
           <Text
             style={[
               {
-                transform: [{ rotateY: '180deg' }],
+                transform: [
+                  { rotateY: I18nManager.isRTL ? '360deg' : '180deg' }
+                ],
                 color: disabled
                   ? disabledTextColor
                   : isSelected

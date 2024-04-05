@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { FlatList } from 'react-native';
+import { FlatList, I18nManager } from 'react-native';
 import { Day } from './Day';
 import { fullDate, getDays, isBefore, isAfter } from '../utils';
 
@@ -55,7 +55,10 @@ const Calendar = memo(
 
     return (
       <FlatList
-        style={{ flex: 1, transform: [{ rotateY: '180deg' }] }}
+        style={{
+          flex: 1,
+          transform: [{ rotateY: I18nManager.isRTL ? '360deg' : '180deg' }]
+        }}
         data={getDays(year, month)}
         renderItem={renderDay}
         keyExtractor={item => `${year}/${month}/${item}`}

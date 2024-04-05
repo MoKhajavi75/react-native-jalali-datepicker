@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList } from 'react-native';
+import { FlatList, I18nManager } from 'react-native';
 import { getYears } from '../utils';
 import { Button } from './Button';
 
@@ -17,7 +17,10 @@ const YearSelector = ({
       key={item}
       title={item}
       style={eachYearStyle}
-      textStyle={[{ transform: [{ rotateY: '180deg' }] }, eachYearTextStyle]}
+      textStyle={[
+        { transform: [{ rotateY: I18nManager.isRTL ? '360deg' : '180deg' }] },
+        eachYearTextStyle
+      ]}
       onPress={selectYear(item)}
     />
   );
@@ -28,7 +31,7 @@ const YearSelector = ({
         width: '95%',
         alignSelf: 'center',
         marginBottom: '3%',
-        transform: [{ rotateY: '180deg' }]
+        transform: [{ rotateY: I18nManager.isRTL ? '360deg' : '180deg' }]
       }}
       data={getYears(minYear, maxYear)}
       renderItem={renderYear}
